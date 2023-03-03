@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {useState} from "react";
 
 export default function App() {
+  const [users, setUsers] = useState([
+      {name: 'Ilyas', usename: '21lyas'},
+      {name: 'Kairat', usename: 'kairow'},
+  ])
+  console.log(users)
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>{users[0].name}</Text>
       <StatusBar style="auto" />
     </View>
   );
